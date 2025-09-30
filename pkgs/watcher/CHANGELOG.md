@@ -3,6 +3,9 @@
 - Improve handling of subdirectories on Linux: watching subdirectories is
   inherently racy with file-system modifications so watcher must be prepared
   for `Directory.watch` to fail with `PathNotFoundException`.
+- Improve handling of watcher overflow on Windows: prepare for future versions
+  of SDK to properly forward `FileSystemException` into the stream returned by
+  the watcher instead of throwing a synchronous exception instead.
 
 ## 1.1.3
 
